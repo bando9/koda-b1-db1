@@ -49,7 +49,7 @@
 
 
 
--- INSERT INTO categories (name) VALUES('Fiksi'), ('Novel'),('Komik'),('Ilmiah'),('Autobiografi'),('Pengembangan Diri'),('Referensi'),('Pelajaran'), ('Non Fiksi');
+-- INSERT INTO categories (name) VALUES('Fiksi'), ('Novel'),('Komik'),('Ilmiah'),('Autobiografi'),('Pengembangan Diri'),('Referensi'),('Pelajaran'), ('Non Fiksi'), ('Sejarah');
 
 -- SELECT * FROM book;
 -- ALTER TABLE book ALTER COLUMN id_category TYPE INT USING id_category::INTEGER;
@@ -74,14 +74,29 @@
 
 -- INSERT INTO officer (name,nik,phone)
 -- VALUES ('Aziz', '888092839283','+62891234890'),
--- ('Kurniawan', '999092839341','+62891233842');
+-- ('Kurniawan', '999092839341','+62891233842'),
+-- ('Budi Santoso', '3201011503920001', '+6281234567801'),
+-- ('Dewi Purnama', '3201015208940002', '+6281234567802'),
+-- ('Eko Prasetyo', '3201011011910003', '+6281234567803'),
+-- ('Fitri Handayani', '3201016504950004', '+6281234567804'),
+-- ('Giri Hendrawan', '3201012207900005', '+6281234567805'),
+-- ('Hani Wijaya', '3201014809960006', '+6281234567806'),
+-- ('Indra Gunawan', '3201010512890007', '+6281234567807'),
+-- ('Jasmine Putri', '3201016001970008', '+6281234567808');
 
 
 -- INSERT INTO member (name,nim,address, email,phone)
--- VALUES
--- ('Lintang Prakoso', '092381','Semarang','lintangp12@tes.com','+1523492'),
+-- VALUES ('Lintang Prakoso', '092381','Semarang','lintangp12@tes.com','+1523492'),
 -- ('Bondan Kurniawan', '092382','Bali','bondankurr@tes.com','+62528293'),
--- ('Rahanung Mahendra', '092383','Magelang','hendramahen@tes.com','+6289342923812');
+-- ('Rahanung Mahendra', '092383','Magelang','hendramahen@tes.com','+6289342923812')
+-- ('Aditya Permana', '092384', 'Bandung', 'aditya.permana@test.com', '+6281234567891'),
+-- ('Bella Saphira', '092385', 'Surabaya', 'bella.saphira@test.com', '+6281234567892'),
+-- ('Candra Wijaya', '092386', 'Yogyakarta', 'candra.wijaya@test.com', '+6281234567893'),
+-- ('Dina Mariana', '092387', 'Jakarta', 'dina.mariana@test.com', '+6281234567894'),
+-- ('Eko Patrio', '092388', 'Solo', 'eko.patrio@test.com', '+6281234567895'),
+-- ('Fanny Fabriana', '092389', 'Malang', 'fanny.fabriana@test.com', '+6281234567896'),
+-- ('Gilang Dirga', '092390', 'Medan', 'gilang.dirga@test.com', '+6281234567897'),
+-- ('Hesti Purwadinata', '092391', 'Bogor', 'hesti.purwadinata@test.com', '+6281234567898');
 
 
 -- ALTER TABLE bookshelf ALTER COLUMN id_book TYPE INT USING id_book::INTEGER;
@@ -118,4 +133,6 @@
 --  ('09-10-2026', '30-10-2026', 10000,4,1,1),
 --  ('19-09-2026', '30-10-2026', 0,9,3,2);
 
---  select * from transactions;
+
+
+ select * from categories;
