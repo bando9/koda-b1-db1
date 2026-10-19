@@ -56,7 +56,6 @@
 -- ALTER TABLE book ADD CONSTRAINT fk_book_category FOREIGN KEY (id_category) REFERENCES book (id);
 
 
--- SELECT * FROM book;
 -- insert into Book (title, author, publication_year,publisher,id_category)
 -- values 
 -- ('Laskar Pelangi', 'Andrea Hirata', '2005', 'Bentang Pustaka', 2),
@@ -73,3 +72,50 @@
 -- ('Dilan 1990', 'Pidi Baiq', '2014', 'Pastel Books', 2);
 
 
+-- INSERT INTO officer (name,nik,phone)
+-- VALUES ('Aziz', '888092839283','+62891234890'),
+-- ('Kurniawan', '999092839341','+62891233842');
+
+
+-- INSERT INTO member (name,nim,address, email,phone)
+-- VALUES
+-- ('Lintang Prakoso', '092381','Semarang','lintangp12@tes.com','+1523492'),
+-- ('Bondan Kurniawan', '092382','Bali','bondankurr@tes.com','+62528293'),
+-- ('Rahanung Mahendra', '092383','Magelang','hendramahen@tes.com','+6289342923812');
+
+
+-- ALTER TABLE bookshelf ALTER COLUMN id_book TYPE INT USING id_book::INTEGER;
+-- ALTER TABLE bookshelf ADD CONSTRAINT fk_bookshelf_book FOREIGN KEY (id_book) REFERENCES book (id);
+-- ALTER TABLE bookshelf ADD CONSTRAINT fk_bookshelf_categoy FOREIGN KEY (id_category) REFERENCES categories (id);
+
+-- ALTER TABLE bookshelf drop CONSTRAINT fk_bookshelf_book;
+-- ALTER TABLE bookshelf drop CONSTRAINT fk_bookshelf_category;
+
+-- SELECT * FROM book;
+-- INSERT INTO bookshelf(id_category,id_book)
+-- VALUES (1,3),(6,4),(1,5),(1,6),(6,7),(4,8),(4,9),(9,10),(1,11),(2,12);
+
+-- DELETE FROM bookshelf WHERE id in (3,4);
+-- SELECT * FROM bookshelf;
+
+
+-- ALTER TABLE transactions ALTER COLUMN id_officer TYPE INT USING id_officer::INTEGER;
+
+-- ALTER TABLE transactions drop CONSTRAINT fk_transactions_book;
+-- ALTER TABLE transactions drop CONSTRAINT fk_transactions_member;
+-- ALTER TABLE transactions drop CONSTRAINT fk_transactions_officer;
+
+-- ALTER TABLE transactions ADD CONSTRAINT fk_transactions_book FOREIGN KEY (id_book) REFERENCES book (id);
+-- ALTER TABLE transactions ADD CONSTRAINT fk_transactions_member FOREIGN KEY (id_member) REFERENCES member (id);
+-- ALTER TABLE transactions ADD CONSTRAINT fk_transactions_officer FOREIGN KEY (id_officer) REFERENCES officer (id);
+
+--  INSERT INTO transactions(book_borrowing_date,book_return_date,fine,id_book,id_member,id_officer)
+--  values ('19-10-2026', '29-11-2026', 2000,5,1,2),
+--  ('19-10-2026', '30-10-2026', 0,12,1,2),
+--  ('09-10-2026', '30-10-2026', 10000,10,1,2),
+--  ('09-10-2026', '30-10-2026', 10000,8,2,2),
+--  ('09-10-2026', '30-10-2026', 10000,6,3,1),
+--  ('09-10-2026', '30-10-2026', 10000,4,1,1),
+--  ('19-09-2026', '30-10-2026', 0,9,3,2);
+
+--  select * from transactions;
