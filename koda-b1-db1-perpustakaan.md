@@ -19,13 +19,16 @@ erDiagram
     BOOKSHELF {
         string id_bookshelf PK
         string id_category FK
+        string id_book FK
     }
-    BOOK ||--|| BOOKSHELF: allows
+    BOOK }o--|| BOOKSHELF: contain
+    BOOKSHELF ||--o{ CATEGORY: is
 
     OFFICER {
         string id_officer
         string name
         string NIK
+        string phone
     }
 
     MEMBER {
@@ -47,7 +50,7 @@ erDiagram
         string id_officer FK
     }
 
-    MEMBER ||--o{ TRANSACTION :allows
+    MEMBER ||--o{ TRANSACTION :borrow
     OFFICER ||--o{ TRANSACTION :allows
     BOOK ||--|| TRANSACTION:is
 
